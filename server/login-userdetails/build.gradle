@@ -3,6 +3,9 @@ apply from: "../web-common.gradle"
 
 dependencies {
 
+    implementation("$boot:spring-boot-starter-data-jpa")
+
+    runtime("com.h2database:h2")
     // user와 authority 객체 정의
     compile project(":web-user-admin")
     compile project(":comp-user-admin")
