@@ -54,5 +54,5 @@ public class SpUser implements UserDetails {
     public boolean isCredentialsNonExpired() {
         return enabled;
     }
-    
+
 }
