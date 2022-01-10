@@ -61,7 +61,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public void configure(WebSecurity web) throws Exception {
         web.ignoring()
                 .requestMatchers(
-                        PathRequest.toStaticResources().atCommonLocations()
+                        PathRequest.toStaticResources().atCommonLocations(),
+                        PathRequest.toH2Console() // H2 콘솔에 접근
                 )
         ;
     }
